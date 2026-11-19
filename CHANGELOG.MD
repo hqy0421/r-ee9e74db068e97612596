@@ -4,6 +4,13 @@ This file documents main changes across releases of **PUNCC**.
 
 ---
 
+## [Unreleased]
+
+### Added
+- `deel.puncc.api.rolling.RollingConformalPredictor`: prediction-ID-managed rolling calibration for online regression. The wrapped predictor stays fixed and point predictions are saved at issuance; versioned, withdrawable ground truths drive residuals recomputed from the currently valid truth and the saved point prediction. Calibration samples are selected by a left-closed, right-opened issuance-time window restricted to ground truths known at issuance, intervals are produced through the existing calibrator on a fresh copy, published intervals are immutable, and the full state can be saved and resumed. Insufficient samples raise `CalibrationUnavailable` while retaining the point prediction.
+
+---
+
 ## [0.9.3] - 2026-06-23
 
 ### Changed

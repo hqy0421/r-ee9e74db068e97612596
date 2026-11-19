@@ -24,6 +24,7 @@ API's Modules
     :maxdepth: 2
 
     conformalization
+    rolling
     prediction
     calibration
     nonconformity_scores
